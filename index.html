@@ -1,0 +1,143 @@
+<!-- http://www.eyecuelab.com/ or http://findmatthew.com/
+https://www.mariekuter.com/portfolio -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Website</title>
+  <meta name="viewport" content='width=device-width, initial-scale=1'>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+</head>
+<body>
+  <header id="fullsize">
+    <div class="subcontainer">
+      <div class='menu-box'>
+        <h1>francois demilly</h1>
+        <h1>web dev enthousiast</h1>
+      </div>
+        <ul class="menu">
+          <li><a href="#">me &amp my skills</a></li>
+          <li><a href="#">my projects</a></li>
+          <li><a href="#">contact</a></li>
+        </ul>
+    </div>
+  </header>
+  <main><!--about-->
+    <div class="introduction">
+      <div class='box'>
+      <div class='title'>Myself</div>
+      <div class="myself">
+        <div class="diamond">
+          <img src="images/selfie.jpg" />
+        </div>
+        <div class='description'><p>I am a Front End Developper Enthousiast from Toronto,<br> currently playing with
+        HTML5, CSS3, JAVASCRIPT and REACT
+        </p></div>
+      </div>
+    </div> <!-- end of myself-->
+      <div class='box'>
+        <div class='title'>Qualities</div>
+        <div class="qualities">
+          <ul>
+            <li>Thirst for knowledge</li>
+            <li>Active Listener</li>
+            <li>Active Questioner</li>
+            <li>Flexibile and Adaptable</li>
+            <li>Critical Thinker</li>
+            <li>Self Motivated</li>
+          </ul>
+        </div>
+      </div><!-- end if qualities-->
+        <div class=box>
+          <div class='title'>Skills</div>
+          <div class='skills'>
+            <div class='bar'><span>80%</span><div class='barFilled filled80'><div class='nameHolder'>HTML</div></div></div>
+            <div class='bar'><span>80%</span><div class='barFilled filled80'><div class='nameHolder'>CSS</div></div></div>
+            <div class='bar'><span>70%</span><div class='barFilled filled70'><div class='nameHolder'>Javascript</div></div></div>
+            <div class='bar'><span>40%</span><div class='barFilled filled40'><div class='nameHolder'>React</div></div></div>
+          </div>
+        </div>
+    </div> <!-- end of intro -->
+    <div class=project-box>
+      <div class='title'>Projects</div>
+        <div class='projects'>
+          <div class="container-pomodoro" id="container-pomodoro">
+           <img src="images/pomodoro.png">
+            <div class='img-description'>
+              <p>Pomodoro Clock</p>
+               <i class="fas fa-expand-arrows-alt" id='fa-pomodoro'></i>
+               <a href='https://francoisdemilly.github.io/PomodoroClock/' target='_blank'><i class="fas fa-link" ></i></a>
+            </div>
+          </div>
+          <div class="container-calculator" id="container-calculator">
+            <img src="images/calculator.png">
+              <div class='img-description'>
+                <p>Calculator</p>
+                <i class="fas fa-expand-arrows-alt" id='fa-calculator'></i>
+                <a href='https://francoisdemilly.github.io/JSCalculator/' target='_blank'><i class="fas fa-link" ></i></a>
+              </div>
+          </div>
+          <div class="container-simon" id="container-simon">
+            <img src="images/simon.png">
+              <div class='img-description'>
+                <p>Simon Game</p>
+                <i class="fas fa-expand-arrows-alt" id='fa-simon'></i>
+                <a href='https://francoisdemilly.github.io/simonGame/' target='_blank'><i class="fas fa-link" ></i></a>
+              </div>
+          </div>
+          <div class="container-tictactoe" id="container-tictactoe">
+            <img src="images/tictactoe.png">
+              <div class='img-description'>
+                <p>TicTacToe Game</p>
+                <i class="fas fa-expand-arrows-alt" id='fa-tictactoe'></i>
+                <a href='https://francoisdemilly.github.io/TicTacToeGame/' target='_blank'><i class="fas fa-link" ></i></a>
+              </div>
+            </div>
+          </div> <!--end of projects -->
+
+
+        <div class='modal-window modal-display ' id='modal-display'>
+            <i class="fas fa-times fa-3x" id='times-close'></i>
+          <div class='container-modal '>
+            <div class='container-slider modal-display' id='container-slider'>
+              <div class='contents pomodoro' id='pomodoro'>
+                <img src='images/pomodoro.png'>
+              </div>
+              <div class='contents calculator' id='calculator'>
+                <img src='images/calculator.png'>
+              </div>
+              <div class='contents simon' id='simon'>
+                <img src="images/simon.png">
+              </div>
+              <div class='contents tictactoe' id='tictactoe'>
+                <img src="images/tictactoe.png">
+              </div>
+            </div> <!-- end of container slider-->
+              <div class='nav-modal modal-display' id='nav-modal'>
+                <a class='prev-modal' id='prev-modal' >&#12296;</a>
+                <a class='next-modal' id='next-modal' >&#12297;</a>
+            </div>
+          </div><!-- end of container modal-->
+        </div> <!-- end pf modal-window-->
+     </div>
+  </main>
+  <footer>
+    <div class='title'>Contact</div>
+    <div class='container-contact'>
+    <div class='box-contact'><p>francois.demilly@gmail.com</p><br>
+                          <p>647-298-9015</p></div>
+    <div class='box-contact'><a href='https://github.com/FrancoisDemilly?tab=repositories' target='_blank'><i class="fab fa-github-square fa-2x"></i></a></div>
+    <div class='box-contact'><a href='https://www.linkedin.com/in/francois-demilly-50378930' target='_blank'><i class="fab fa-linkedin fa-2x"></i></a></div>
+    </div>
+  </footer>
+</body>
+  <script src="script.js"></script>
+</html>
+
+<!--
+<a href='www.linkedin.com/in/francois-demilly-50378930' target='_blank'></a>
+
+
+-->

@@ -1,0 +1,368 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'arial';
+  font-size: 18px;
+  height: 100%;
+  position: relative;
+}
+
+header{
+height: 50vh;
+/*background-color: rgba(65, 183, 232, 1)*/
+}
+
+.subcontainer{
+  background: url('images/cubes.png') top left repeat ;
+  background-size: 3%;
+  background-attachment: fixed;
+  height: 50vh;
+  background-color: rgba(39, 127, 255, 1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+
+h1{
+  text-transform: uppercase;
+  font-size: 3em;
+  margin-left: 2%;
+  color: #41B4E8;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  margin-bottom: 25px;
+}
+
+ a{
+  text-decoration: none;
+  color: #fff;
+  text-transform: capitalize;
+  font-size: 1.2em;
+}
+
+
+
+/*main*/
+
+
+
+.introduction{
+  display: flex;
+  justify-content: space-around;
+  height: auto;
+  background: url('images/cubes.png') top left repeat;
+  background-size: 3%;
+}
+
+/*box*/
+
+.box{
+  width: 33.3333%;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.title{
+  height: 45px;
+  background: linear-gradient(rgba(39, 127, 255, 1) 90%,rgba(65, 183, 232, 1));
+  width: 100%;
+  text-align: center;
+  padding-top: 12px;
+  color: #fff;
+  border-top: 1px solid rgba(65, 183, 232, 1);
+  border-bottom: 1px solid rgba(65, 183, 232, 1);
+}
+
+
+/*myself box*/
+
+.myself{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  color: #41B4E8;
+  height: 60vh;
+}
+
+.diamond{
+  width: 200px;
+  height: 200px;
+  transform: rotate(45deg);
+  overflow: hidden;
+}
+
+.diamond img{
+  max-width: 100%;
+  transform:rotate(-45deg);
+  z-index: -1;
+}
+
+.description{
+  width: 80%;
+  text-align: center;
+}
+
+/*qualities box*/
+.qualities{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: #41B4E8;
+  height: 60vh;
+  border-right: 0.1px solid rgba(65, 183, 232, 1);
+  border-left: 0.1px solid rgba(65, 183, 232, 1);
+}
+
+
+.qualities > ul{
+  list-style-type: none;
+}
+
+.qualities li{
+  padding: 10px 0;
+}
+
+.skills{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+}
+
+.bar{
+  height: 30px;
+  width: 80%;
+  background-color: rgba(65, 183, 232, 1);
+  margin: 10px 0;
+  position: relative;
+  border-radius: 1px;
+}
+
+.barFilled{
+  height: 30px;
+  background-color: rgba(39, 127, 255, 1);
+  position: absolute;
+  border-radius: 1px;
+}
+
+.filled80{
+  width: 80%;
+}
+
+.filled70{
+  width: 70%;
+}
+
+.filled40{
+  width: 40%;
+}
+
+
+
+.nameHolder{
+  height: 30px;
+  position: absolute;
+  font-size: 15px;
+  padding-top: 7px ;
+  padding-left: 2px;
+  color: #fff;
+  border-radius: 1px;
+}
+
+
+span{
+  float: right;
+  font-size: 15px;
+  padding: 7px 3px 0px 0px;
+  color: #fff;
+  font-size: 0.75em;
+}
+
+/*project and thumbmail*/
+
+.project-box{
+  height: 100%;
+  position: relative;
+}
+
+.projects{
+  background: url('images/cubes.png') top left repeat ;
+  background-size: 3%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background-color: #fff;
+  /*position: relative;*/
+  /*z-index: -2;*/
+}
+
+.container-pomodoro,
+.container-calculator,
+.container-simon,
+.container-tictactoe
+{
+  width: 450px;
+  height: 450px;
+  overflow: hidden;
+  margin: 15px;
+  box-shadow: 1px 1px 2px 1px rgba(1, 1, 1, 0.2);
+  border-radius: 1px;
+}
+
+ .projects img {
+  width: 450px;
+  height: 450px;
+  border-radius: 1px;
+}
+
+.img-description{
+  position: relative;
+  height: 30px;
+  width: 450px;
+  background-color: rgba(39, 127, 255, 1);
+  margin-top: 0px;
+  color: #fff;
+  -webkit-transition: margin-top 0.5s ease-in;
+          transition: margin-top 0.5s ease-in;
+  border-radius: 1px;
+}
+
+.img-description p{
+  display: inline-block;
+  margin-left: 2px;
+  line-height: 25px;
+
+}
+
+.img-description i{
+  float: right;
+  margin-top: 4px;
+  margin-right: 5px;
+}
+
+.container-pomodoro:hover .img-description{
+  margin-top: -35px;
+
+}
+
+.container-calculator:hover .img-description{
+  margin-top: -35px;
+}
+
+.container-simon:hover .img-description{
+  margin-top: -35px;
+}
+
+.container-tictactoe:hover .img-description{
+  margin-top: -35px;
+}
+
+
+/*modal container*/
+.modal-display{
+  visibility: hidden;
+}
+
+.modal-display i{
+  float: right;
+  color: #444;
+  margin-right: 6px;
+  cursor: pointer;
+}
+
+.modal-window{
+  position: relative;
+  margin-top: -760px;
+  height: 650px;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index:1;
+}
+
+.container-modal{
+  max-width: 650px;/*650*/
+  max-height: 650px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.container-slider{
+  width: 2600px;
+  position: relative;
+  z-index: 2;
+  margin-left: 0px;
+  -webkit-transition: margin-left 0.5s ease-in-out;
+          transition: margin-left 0.5s ease-in-out;
+}
+
+.contents{
+  width: 650px;
+  height: 650px;
+  float: left;
+  text-align: center;
+  padding: 0 0;
+  border-radius: 1%;
+}
+
+.nav-modal{
+  font-size: 5em;
+  width: 900px;
+  position: absolute;
+  margin:   200px  0px 0px -125px;
+}
+
+.nav-modal a{
+  text-decoration: none;
+  color: #444;
+  font-weight: bold;
+  cursor: pointer;
+  user-select: none;
+}
+
+.prev-modal{
+  float: left;
+}
+
+.next-modal{
+  float: right;
+}
+
+
+
+footer{
+  height: 25vh;
+  background: url('images/cubes.png') top left repeat ;
+  background-color: rgba(39, 127, 255, 1);
+  background-size: 3%;
+  position: relative;
+  margin-top: 110px;
+}
+
+.container-contact{
+  display: flex;
+  align-items: center;
+  margin-top: 25px;
+  color: #fff;
+}
+
+.box-contact{
+  width: 33.3333%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  margin: auto 0;
+  cursor: pointer
+}
