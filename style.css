@@ -11,51 +11,178 @@ body{
   position: relative;
 }
 
-header{
-height: 50vh;
-/*background-color: rgba(65, 183, 232, 1)*/
-}
 
-.subcontainer{
-  background: url('images/cubes.png') top left repeat ;
+
+/*creating a modal menu*/
+.sidebar-header {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row-reverse;
+
+}
+ .content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex: 1;
+   background: url('images/cubes.png') top left repeat ;
   background-size: 3%;
   background-attachment: fixed;
-  height: 50vh;
+  height: 40vh;
   background-color: rgba(39, 127, 255, 1);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+}
+
+ .sidebar {
+  height: 40vh;
+  margin-left: -180px;
+  -webkit-animation-name: neutral;
+          animation-name: neutral;
+  -webkit-animation-duration: 0.4s;
+          animation-duration: 0.4s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+    }
+  @-webkit-keyframes open {
+      0%{
+        margin-left: -180px;
+      }
+
+      100%{
+        margin-left: 0px;
+      }
+    }
+
+  @-webkit-keyframes close {
+      0%{
+        margin-left: 0px;
+      }
+
+      100%{
+        margin-left: -180px;
+      }
+    }
+
+  @keyframes open {
+      0%{
+        margin-left: -180px;
+      }
+
+      100%{
+        margin-left: 0px;
+      }
+    }
+
+  @keyframes close {
+      0%{
+        margin-left: 0px;
+      }
+
+      100%{
+        margin-left: -180px;
+      }
+    }
+
+.toggle-sidebar i{
+  color: #41B4E8;
+  padding: 5px;
+  cursor: pointer;
 }
 
 
+    /* Look n feel */
+.sub-menu {
+  height: 100%;
+  width: 180px;
+  background: rgba(39, 127, 255, 1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  list-style: none;
+  padding-top: 100px;
+  border-left: 1px solid rgba(65,180,232,1);
+}
+
+.sub-menu a {
+  margin: 0 auto;
+  display: block;
+  width: 160px;
+  text-align: center;
+  padding: 0.75em 0em;
+  text-decoration: none;
+  color: #fff;
+  border-radius: 4px;
+  background-color: rgba(65,180,232,0.9);
+}
+
+.sub-menu a:hover {
+  margin: 0 auto;
+  display: block;
+  width: 160px;
+  text-align: center;
+  padding: 0.75em 0em;
+  text-decoration: none;
+  color: #fff;
+  border-radius: 4px;
+  background-color: rgba(65,180,232,1);
+}
 
 h1{
   text-transform: uppercase;
   font-size: 3em;
   margin-left: 2%;
   color: #41B4E8;
+  width: 620px;
 }
 
-.menu {
+
+/*title [myself qualities skills], projects, contact*/
+.titleContainer{
   display: flex;
-  justify-content: space-around;
-  list-style-type: none;
-  margin-bottom: 25px;
+  justify-content: flex-end;
+  flex-direction: row;
+  overflow: hidden;
+  width: 100%;
 }
 
- a{
-  text-decoration: none;
+.title{
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  height: 45px;
+  background: linear-gradient(rgba(39, 127, 255, 1) 90%,rgba(65, 183, 232, 1));
+  padding-top: 12px;
   color: #fff;
-  text-transform: capitalize;
-  font-size: 1.2em;
+  border-top: 1px solid rgba(65, 183, 232, 1);
+  border-bottom: 1px solid rgba(65, 183, 232, 1);
+}
+
+.caretsUpDown{
+  height: 45px;
+  width: 15px;
+  background: linear-gradient(rgba(39, 127, 255, 1) 90%,rgba(65, 183, 232, 1));
+  display: flex;
+  flex-direction: column;
+  margin-right: 0px;
+  border-top: 1px solid rgba(65, 183, 232, 1);
+  border-bottom: 1px solid rgba(65, 183, 232, 1);
+  margin-right: -15px;
+}
+
+.titleContainer:hover > .title > h3{
+  margin-left: 15px;
+}
+
+.titleContainer:hover > .caretsUpDown{
+  margin-right: 0px;
+}
+
+.hidden{
+  display: none;
 }
 
 
-
-/*main*/
-
-
-
+/*main */
+/*myself qualities skills boxes*/
 .introduction{
   display: flex;
   justify-content: space-around;
@@ -64,26 +191,11 @@ h1{
   background-size: 3%;
 }
 
-/*box*/
-
 .box{
   width: 33.3333%;
   display: flex;
   flex-direction: column;
-
 }
-
-.title{
-  height: 45px;
-  background: linear-gradient(rgba(39, 127, 255, 1) 90%,rgba(65, 183, 232, 1));
-  width: 100%;
-  text-align: center;
-  padding-top: 12px;
-  color: #fff;
-  border-top: 1px solid rgba(65, 183, 232, 1);
-  border-bottom: 1px solid rgba(65, 183, 232, 1);
-}
-
 
 /*myself box*/
 
@@ -205,8 +317,6 @@ span{
   justify-content: space-around;
   flex-wrap: wrap;
   background-color: #fff;
-  /*position: relative;*/
-  /*z-index: -2;*/
 }
 
 .container-pomodoro,
@@ -253,21 +363,26 @@ span{
   margin-right: 5px;
 }
 
+.fas{
+  color: #fff;
+  cursor: pointer;
+}
+
 .container-pomodoro:hover .img-description{
-  margin-top: -35px;
+  margin-top: -34px;
 
 }
 
 .container-calculator:hover .img-description{
-  margin-top: -35px;
+  margin-top: -34px;
 }
 
 .container-simon:hover .img-description{
-  margin-top: -35px;
+  margin-top: -34px;
 }
 
 .container-tictactoe:hover .img-description{
-  margin-top: -35px;
+  margin-top: -34px;
 }
 
 
@@ -284,9 +399,10 @@ span{
 }
 
 .modal-window{
-  position: relative;
-  margin-top: -760px;
-  height: 650px;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
   background-color: rgba(0, 0, 0, 0.6);
   z-index:1;
 }
@@ -329,6 +445,9 @@ span{
   font-weight: bold;
   cursor: pointer;
   user-select: none;
+  -webkit-user-select: none; /* Chrome/Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+ */
 }
 
 .prev-modal{
@@ -339,7 +458,7 @@ span{
   float: right;
 }
 
-
+/*Footer */
 
 footer{
   height: 25vh;
@@ -364,5 +483,17 @@ footer{
   justify-content: space-between;
   text-align: center;
   margin: auto 0;
-  cursor: pointer
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none; /* Chrome/Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+ */
 }
+
+.fab{
+  color: #fff;
+}
+
+/*+++++++++++++++++++++++++++++++++++++++++++*/
+
+
