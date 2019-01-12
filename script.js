@@ -1,18 +1,10 @@
 
-/*var onOff = document.getElementById('test');
 
-
-onOff.addEventListener("click", ()=> {
-  document.getElementById('menu').classList.toggle("hidden");
-
-})*/
-
-
-var initModal = function(){
+var init = function(){
   //container slider code
   let containerSlider = document.getElementById('container-slider');//for closing the modal window & the slider to work
   let modalDisplay = document.getElementById('modal-display'); // for closing the modal window
-  let timesClose = document.getElementById('times-close');// for closing the modal window
+  let sliderClose = document.getElementById('slider-close');// for closing the modal window
   let navModal = document.getElementById('nav-modal');// for closing the modal window
 
   let containerPomodoro = document.getElementById('container-pomodoro') // for opening the window
@@ -75,7 +67,7 @@ var initModal = function(){
 
   //closing the modal window
 
-  timesClose.addEventListener('click', function(){
+  sliderClose.addEventListener('click', function(){
       modalDisplay.style.visibility = 'hidden'
       containerSlider.style.visibility = 'hidden';
       navModal.style.visibility = 'hidden';
@@ -112,12 +104,39 @@ var initModal = function(){
   })
 
 
-  //sliding slidebar
+  //sliding slidebar and main title
       let sidebar = document.getElementById('sidebar');
-      let toggle = document.getElementById('toggle-sidebar')
+      let toggle = document.getElementById('toggle-sidebar');
+      let name = document.getElementById('name');
+      let viewport = window.innerWidth;
 
+      /*animationg the main title*/
       toggle.addEventListener('click', function(){
-        console.log('toggle', toggle);
+        let webkitAnimationName =
+          window.getComputedStyle(name).getPropertyValue('-webkit-animation-name');
+        let animationName =
+          window.getComputedStyle(name).getPropertyValue('animation-name');
+        let marginRight =
+          window.getComputedStyle(name).getPropertyValue('margin-right');
+
+
+
+        if(webkitAnimationName != ''){
+          ((webkitAnimationName != 'moveToLeft') ?
+            (name.style.webkitAnimationName = 'moveToLeft', name.style.marginRight = '-100px') :
+            (name.style.webkitAnimationName = 'moveToRight', name.style.marginRight = '0px'));
+        }
+
+        if(animationName != null){
+          ((animationName != 'moveToLeft') ?
+            (name.style.animationName = 'moveToLeft', name.style.marginRight = '-100px') :
+            (name.style.animationName = 'moveToRight', name.style.marginRight = '0px'));
+        }
+
+      }, false);
+
+      //animating the side bar
+      toggle.addEventListener('click', function(){
         let webkitAnimationName =
           window.getComputedStyle(sidebar).getPropertyValue('-webkit-animation-name');
         let animationName =
@@ -125,26 +144,37 @@ var initModal = function(){
         let marginLeft =
           window.getComputedStyle(sidebar).getPropertyValue('margin-left');
 
+      if(viewport >= 521){
+          console.log('viewport >= 521', viewport)
         if(webkitAnimationName != ''){
           ((webkitAnimationName != 'open') ?
             (sidebar.style.webkitAnimationName = 'open', sidebar.style.marginLeft = '0px') :
-            (sidebar.style.webkitAnimationName = 'close' , sidebar.style.marginLeft = '-180px'))
-          console.log('from webkitAnimationName',marginLeft);
+            (sidebar.style.webkitAnimationName = 'close' , sidebar.style.marginLeft = '-180px'));
         }
 
         if(animationName != null){
           ((animationName != 'open') ?
             (sidebar.style.animationName = 'open', sidebar.style.marginLeft = '0px') :
-            (sidebar.style.animationName = 'close', sidebar.style.marginLeft = '-180px'))
-          console.log('from animationName', marginLeft);
+            (sidebar.style.animationName = 'close', sidebar.style.marginLeft = '-180px'));
         }
-        console.log('after', marginLeft);
+      }else{
+          console.log('viewport <= 521', viewport)
+         if(webkitAnimationName != ''){
+          ((webkitAnimationName != 'open') ?
+            (sidebar.style.webkitAnimationName = 'open', sidebar.style.marginLeft = '0px') :
+            (sidebar.style.webkitAnimationName = 'close' , sidebar.style.marginLeft = '-100px'));
+        }
+
+        if(animationName != null){
+          ((animationName != 'open') ?
+            (sidebar.style.animationName = 'open', sidebar.style.marginLeft = '0px') :
+            (sidebar.style.animationName = 'close', sidebar.style.marginLeft = '-100px'));
+        }
+      }
       }, false)
-
-
 }
 
-window.addEventListener('DOMContentLoaded', initModal, false);
+window.addEventListener('DOMContentLoaded', init, false);
 
 
 

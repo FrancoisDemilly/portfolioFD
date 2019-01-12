@@ -20,9 +20,8 @@
 
     <main class="content">
       <div class='content-container'>
-         <div class='name'>
-            <h1>francois demilly</h1>
-            <h1>web dev enthusiast</h1>
+         <div class='name' id='name'>
+            <h3 class='mainTitle' id='mainTitle'>francois demilly<br>web dev enthusiast</h3>
           </div>
       </div>
       <div class="toggle-sidebar" id='toggle-sidebar'><i class="fas fa-bars fa-3x"></i></div>
@@ -32,7 +31,7 @@
 
   <main id='Me'>
     <div class="introduction">
-      <div class='box'>
+      <div class='box boxMyself'>
         <div class='title'><h3>Myself</h3></div>
         <div class="myself">
           <div class="diamond">
@@ -43,7 +42,7 @@
           </div>
         </div><!-- end of myself-->
       </div> <!-- end of box -->
-      <div class='box'>
+      <div class='box boxQualities' >
         <div class='title'><h3>Qualities</h3></div>
         <div class="qualities">
           <ul>
@@ -56,7 +55,7 @@
           </ul>
         </div><!-- end of qualities-->
       </div><!-- end of box-->
-      <div class=box>
+      <div class='box boxSkills'>
         <div class='titleContainer'>
           <div class='title'><h3>Skills</h3></div>
           <div class=caretsUpDown>
@@ -118,8 +117,9 @@
 
           <!-- slider and modal window -->
           <div class='modal-window modal-display ' id='modal-display'>
-            <i class="fas fa-times fa-3x" id='times-close'></i>
+
             <div class='container-modal '>
+              <i class="fas fa-times fa-3x sliderClose" id='slider-close'></i>
               <div class='container-slider modal-display' id='container-slider'>
                 <div class='contents pomodoro' id='pomodoro'>
                   <img src='images/pomodoro.png'>
@@ -136,8 +136,12 @@
               </div> <!-- end of container slider-->
               <!--navigation of sliders < > -->
               <div class='nav-modal modal-display' id='nav-modal'>
-                <a class='prev-modal' id='prev-modal' >&#12296;</a>
-                <a class='next-modal' id='next-modal' >&#12297;</a>
+                <a class='prev-modal' id='prev-modal' >
+                  <i class="fas fa-chevron-left fa-5x"></i> <!-- &#12296; -->
+                </a>
+                <a class='next-modal' id='next-modal' >
+                  <i class="fas fa-chevron-right fa-5x"></i><!--&#12297; -->
+                </a>
               </div><!-- end of navigation of sliders < > -->
             </div><!-- end of container modal-->
           </div> <!-- end of modal-window-->
@@ -145,6 +149,7 @@
   </main>
   <!-- footer -->
   <footer id='Contact'>
+  <!-- ******************************************************************* -->
     <div class='titleContainer'>
       <div class='title'><h3>Contact</h3></div>
       <div class=caretsUpDown>
@@ -152,6 +157,7 @@
           <a class='hidden'><i class="fas fa-caret-down"></i></a>
       </div>
     </div>
+  <!-- ******************************************************************* -->
     <div class='container-contact'>
       <div class='box-contact'><p>francois.demilly@gmail.com</p><br>
                             <p>647-298-9015</p></div>
