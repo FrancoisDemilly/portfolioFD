@@ -209,6 +209,11 @@ body{
       font-size: 12px;
     }
 
+    .sub-menu a:hover{
+      width: 90px;
+      font-size: 12px;
+    }
+
     @-webkit-keyframes open {
       0%{
         margin-left: -100px;
