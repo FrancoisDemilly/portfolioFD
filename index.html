@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Website</title>
+  <title>Francois' portfolio</title>
   <meta name="viewport" content='width=device-width, initial-scale=1'>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
@@ -24,14 +24,14 @@
             <h3 class='mainTitle' id='mainTitle'>francois demilly<br>web dev enthusiast</h3>
           </div>
       </div>
-      <div class="toggle-sidebar" id='toggle-sidebar'><i class="fas fa-bars fa-3x"></i></div>
+      <div class="toggle-sidebar" id='toggle-sidebar'><i class="fas fa-bars"></i></div>
     </main>
 
   </header>
 
   <main id='Me'>
     <div class="introduction">
-      <div class='box boxMyself'>
+      <div class='boxMyself'>
         <div class='title'><h3>Myself</h3></div>
         <div class="myself">
           <div class="diamond">
@@ -42,7 +42,7 @@
           </div>
         </div><!-- end of myself-->
       </div> <!-- end of box -->
-      <div class='box boxQualities' >
+      <div class='boxQualities' >
         <div class='title'><h3>Qualities</h3></div>
         <div class="qualities">
           <ul>
@@ -55,7 +55,7 @@
           </ul>
         </div><!-- end of qualities-->
       </div><!-- end of box-->
-      <div class='box boxSkills'>
+      <div class='boxSkills'>
         <div class='titleContainer'>
           <div class='title'><h3>Skills</h3></div>
           <div class=caretsUpDown>
@@ -81,6 +81,14 @@
         </div>
       </div><!-- end of titleContainer -->
         <div class='projects'> <!-- thumbmail of project -->
+          <div class="container-recipebox" id="container-recipebox">
+           <img src="images/recipebox.png">
+            <div class='img-description'>
+              <p>Recipe Box</p>
+               <i class="fas fa-expand-arrows-alt" id='fa-recipebox'></i>
+               <a href='https://recipeboxfd-gl21wxuji.now.sh/' target='_blank'><i class="fas fa-link" ></i></a>
+            </div>
+          </div>
           <div class="container-pomodoro" id="container-pomodoro">
            <img src="images/pomodoro.png">
             <div class='img-description'>
@@ -121,6 +129,9 @@
             <div class='container-modal '>
               <i class="fas fa-times fa-3x sliderClose" id='slider-close'></i>
               <div class='container-slider modal-display' id='container-slider'>
+                <div class='contents recipebox' id='recipebox'>
+                  <img src='images/recipebox.png'>
+                </div>
                 <div class='contents pomodoro' id='pomodoro'>
                   <img src='images/pomodoro.png'>
                 </div>

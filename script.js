@@ -7,16 +7,19 @@ var init = function(){
   let sliderClose = document.getElementById('slider-close');// for closing the modal window
   let navModal = document.getElementById('nav-modal');// for closing the modal window
 
+  let containerRecipebox = document.getElementById('container-recipebox') // for opening the window
   let containerPomodoro = document.getElementById('container-pomodoro') // for opening the window
   let containerCalculator = document.getElementById('container-calculator') // for opening the window
   let containerSimon = document.getElementById('container-simon') // for opening the window
   let containerTictactoe = document.getElementById('container-tictactoe') // for opening the window
 
+  let faRecipebox = document.getElementById('fa-recipebox'); //for opennig the modal window
   let faPomodoro = document.getElementById('fa-pomodoro'); //for opennig the modal window
   let faCalculator = document.getElementById('fa-calculator'); //for opennig the modal window
   let faSimon = document.getElementById('fa-simon'); //for opennig the modal window
   let faTictactoe = document.getElementById('fa-tictactoe'); //for opennig the modal window
 
+  let recipebox = document.getElementById('recipebox');
   let pomodoro = document.getElementById('pomodoro');
   let calculator = document.getElementById('calculator');
   let tictactoe = document.getElementById('tictactoe');
@@ -40,6 +43,9 @@ var init = function(){
         containerSlider.style.marginLeft = '-1950px';
         break;
       case '-1950px':
+        containerSlider.style.marginLeft = '-2600px';
+        break;
+      case '-2600px':
         containerSlider.style.marginLeft = '0px';
         break;
     }
@@ -51,7 +57,7 @@ var init = function(){
 
     switch(margin){
       case '0px':
-        containerSlider.style.marginLeft = '-1950px';
+        containerSlider.style.marginLeft = '-2600px';
         break;
       case '-650px':
         containerSlider.style.marginLeft = '0px';
@@ -61,6 +67,9 @@ var init = function(){
         break;
       case '-1950px':
         containerSlider.style.marginLeft = '-1300px';
+        break;
+      case '-2600px':
+        containerSlider.style.marginLeft = '-1950px';
         break;
     }
   }, false)
@@ -75,65 +84,46 @@ var init = function(){
 
   //openning the modal window for each project
 
-  faPomodoro.addEventListener('click', function(){
+  faRecipebox.addEventListener('click', function(){
     containerSlider.style.marginLeft = '0px';
     modalDisplay.style.visibility = 'visible';
     containerSlider.style.visibility = 'visible';
     navModal.style.visibility = 'visible';
   })
 
-  faCalculator.addEventListener('click', function(){
+  faPomodoro.addEventListener('click', function(){
     containerSlider.style.marginLeft = '-650px';
     modalDisplay.style.visibility = 'visible';
     containerSlider.style.visibility = 'visible';
     navModal.style.visibility = 'visible';
   })
 
-  faSimon.addEventListener('click', function(){
+  faCalculator.addEventListener('click', function(){
     containerSlider.style.marginLeft = '-1300px';
     modalDisplay.style.visibility = 'visible';
     containerSlider.style.visibility = 'visible';
     navModal.style.visibility = 'visible';
   })
 
-  faTictactoe.addEventListener('click', function(){
+  faSimon.addEventListener('click', function(){
     containerSlider.style.marginLeft = '-1950px';
     modalDisplay.style.visibility = 'visible';
     containerSlider.style.visibility = 'visible';
     navModal.style.visibility = 'visible';
   })
 
+  faTictactoe.addEventListener('click', function(){
+    containerSlider.style.marginLeft = '-2600px';
+    modalDisplay.style.visibility = 'visible';
+    containerSlider.style.visibility = 'visible';
+    navModal.style.visibility = 'visible';
+  })
 
-  //sliding slidebar and main title
+
+  //sliding slidebar
       let sidebar = document.getElementById('sidebar');
       let toggle = document.getElementById('toggle-sidebar');
-      let name = document.getElementById('name');
       let viewport = window.innerWidth;
-
-      /*animationg the main title*/
-      toggle.addEventListener('click', function(){
-        let webkitAnimationName =
-          window.getComputedStyle(name).getPropertyValue('-webkit-animation-name');
-        let animationName =
-          window.getComputedStyle(name).getPropertyValue('animation-name');
-        let marginRight =
-          window.getComputedStyle(name).getPropertyValue('margin-right');
-
-
-
-        if(webkitAnimationName != ''){
-          ((webkitAnimationName != 'moveToLeft') ?
-            (name.style.webkitAnimationName = 'moveToLeft', name.style.marginRight = '-100px') :
-            (name.style.webkitAnimationName = 'moveToRight', name.style.marginRight = '0px'));
-        }
-
-        if(animationName != null){
-          ((animationName != 'moveToLeft') ?
-            (name.style.animationName = 'moveToLeft', name.style.marginRight = '-100px') :
-            (name.style.animationName = 'moveToRight', name.style.marginRight = '0px'));
-        }
-
-      }, false);
 
       //animating the side bar
       toggle.addEventListener('click', function(){
@@ -172,7 +162,7 @@ var init = function(){
         }
       }
       }, false)
-}
+}//end of init function
 
 window.addEventListener('DOMContentLoaded', init, false);
 
