@@ -250,6 +250,7 @@ body{
   .sidebar-header{
       min-height: 130px;
       }
+}
 
 /*title [myself qualities skills], projects, contact*/
 /*title container is used to hold the title and the up and down navigation*/
@@ -451,6 +452,19 @@ span{
   color: #fff;
 }
 
+@media (max-width: 899px){
+  .boxQualities{
+    border-right: none;
+    border-left: 0.1px solid rgba(65, 183, 232, 1);
+  }
+}
+
+@media (max-width: 599px){
+  .boxQualities{
+    border-right: none;
+    border-left: none;
+  }
+}
 
 @media (min-width: 1680px){
   .description{
