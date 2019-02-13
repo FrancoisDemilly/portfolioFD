@@ -121,8 +121,8 @@ var init = function(){
 
 
   //sliding slidebar
-      let sidebar = document.getElementById('sidebar');
-      let toggle = document.getElementById('toggle-sidebar');
+      var sidebar = document.getElementById('sidebar'); //('sidebar')
+      let toggle = document.getElementById('toggle');//('toggle-sidebar')
       let viewport = window.innerWidth;
 
       //animating the side bar
@@ -131,23 +131,26 @@ var init = function(){
           window.getComputedStyle(sidebar).getPropertyValue('-webkit-animation-name');
         let animationName =
           window.getComputedStyle(sidebar).getPropertyValue('animation-name');
-        let marginLeft =
-          window.getComputedStyle(sidebar).getPropertyValue('margin-left');
+       /* let marginLeft =
+          window.getComputedStyle(sidebar).getPropertyValue('margin-left');*/
 
-      if(viewport >= 521){
-          console.log('viewport >= 521', viewport)
+     // if(viewport >= 521){
         if(webkitAnimationName != ''){
           ((webkitAnimationName != 'open') ?
-            (sidebar.style.webkitAnimationName = 'open', sidebar.style.marginLeft = '0px') :
-            (sidebar.style.webkitAnimationName = 'close' , sidebar.style.marginLeft = '-180px'));
-        }
-
+            /*(sidebar.style.webkitAnimationName = 'open', sidebar.style.marginLeft = '0px') :
+            (sidebar.style.webkitAnimationName = 'close' , sidebar.style.marginLeft = '-180px'));*/
+            (sidebar.style.webkitAnimationName = 'open' /*, sidebar.style.webkitAnimationName = open*/) :
+            (sidebar.style.webkitAnimationName = 'close' /*, sidebar.style.webkitAnimationName = close */));
+      }
         if(animationName != null){
           ((animationName != 'open') ?
-            (sidebar.style.animationName = 'open', sidebar.style.marginLeft = '0px') :
-            (sidebar.style.animationName = 'close', sidebar.style.marginLeft = '-180px'));
+           /* (sidebar.style.animationName = 'open', sidebar.style.marginLeft = '0px') :
+            (sidebar.style.animationName = 'close', sidebar.style.marginLeft = '-180px'));*/
+            (sidebar.style.animationName = 'open' /*, sidebar.style.animationName = open*/) :
+            (sidebar.style.animationName = 'close' /*, sidebar.style.animationName = close*/));
+
         }
-      }else{
+     /* } else{
           console.log('viewport <= 521', viewport)
          if(webkitAnimationName != ''){
           ((webkitAnimationName != 'open') ?
@@ -160,7 +163,7 @@ var init = function(){
             (sidebar.style.animationName = 'open', sidebar.style.marginLeft = '0px') :
             (sidebar.style.animationName = 'close', sidebar.style.marginLeft = '-100px'));
         }
-      }
+      }*/
       }, false)
 }//end of init function
 

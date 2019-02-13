@@ -8,42 +8,37 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
 </head>
 <body>
-  <header class='sidebar-header'>
-
-    <aside class="sidebar " id='sidebar'>
-      <ul class="sub-menu" id='sub-menu'>
-        <li><a href="#Me">Me &amp My Skills</a></li>
-        <li><a href="#MyProjects">My Projects</a></li>
-        <li><a href="#Contact">Contact</a></li>
-      </ul>
-    </aside>
-
-    <main class="content">
-      <div class='content-container'>
-         <div class='name' id='name'>
-            <h3 class='mainTitle' id='mainTitle'>francois demilly<br>web dev enthusiast</h3>
-          </div>
+  <header>
+    <div class="container">
+      <div class="sidebar" id="sidebar">
+        
+        <ul class="menu">
+          <div class="toggle" id="toggle"><i class="fas fa-bars"></i></div>
+          <li><a href="#About">ABOUT</a></li>
+          <li><a href="#MyProjects">PROJECTS</a></li>
+          <li><a href="#Contact">CONTACT</a></li>
+        </ul>
       </div>
-      <div class="toggle-sidebar" id='toggle-sidebar'><i class="fas fa-bars"></i></div>
-    </main>
-
+      <div class="main">
+        <h1><span class="firstline">Francois Demilly</span><br><span class="secondline">Front End Developer</span></h1>
+      </div>
+    </div>
   </header>
 
-  <main id='Me'>
+  <main id='About'>
     <div class="introduction">
       <div class='boxMyself'>
-        <div class='title'><h3>Myself</h3></div>
+        <div class='title'><h3>MYSELF</h3></div>
         <div class="myself">
           <div class="diamond">
             <img src="images/selfie.jpg" />
           </div>
-          <div class='description'><p>I am a Front End Developper Enthusiast from Toronto,<br> currently playing with
-        HTML5, CSS3, JAVASCRIPT and REACT</p>
+          <div class='description'><p>Hello I am Francois, Front End Developer based in Toronto. <br>Over the past few years I have been teaching myself Front End Web Development, doing so, I have discovered a world of endless possibilities. Only Web development gives me a sense of satisfaction that I have never encountered in any of my previous jobs. I really take pride and ownership in building website. <br>Creative and conscientious, my stack is based on HTML5, CSS3, Javascript, ReactJS, Firebase and Github.<br> I am currently looking for a full time position.</p>
           </div>
         </div><!-- end of myself-->
       </div> <!-- end of box -->
       <div class='boxQualities' >
-        <div class='title'><h3>Qualities</h3></div>
+        <div class='title'><h3>QUALITIES</h3></div>
         <div class="qualities">
           <ul>
             <li>Thirst for knowledge</li>
@@ -57,11 +52,7 @@
       </div><!-- end of box-->
       <div class='boxSkills'>
         <div class='titleContainer'>
-          <div class='title'><h3>Skills</h3></div>
-          <div class=caretsUpDown>
-             <a href="#sidebar"><i class="fas fa-caret-up"></i></a>
-            <a href="#MyProjects"><i class="fas fa-caret-down"></i></a>
-          </div>
+          <div class='title'><h3>SKILLS</h3></div>
         </div><!-- end of titleContainer -->
           <div class='skills'>
             <div class='bar'><span>80%</span><div class='barFilled filled80'><div class='nameHolder'>HTML</div></div></div>
@@ -70,15 +61,11 @@
             <div class='bar'><span>40%</span><div class='barFilled filled40'><div class='nameHolder'>React</div></div></div>
           </div>
         </div>
-    </div> <!-- end of intro -->
+      </div> <!-- end of intro -->
 
     <div class=project-box id='MyProjects'>
       <div class='titleContainer'>
-        <div class='title'><h3>Projects</h3></div>
-        <div class=caretsUpDown>
-            <a href="#Me"><i class="fas fa-caret-up"></i></a>
-            <a href="#Contact"><i class="fas fa-caret-down"></i></a>
-        </div>
+        <div class='title'><h3>PROJECTS</h3></div>
       </div><!-- end of titleContainer -->
         <div class='projects'> <!-- thumbmail of project -->
           <div class="container-recipebox" id="container-recipebox">
@@ -87,6 +74,13 @@
               <p>Recipe Box</p>
                <i class="fas fa-expand-arrows-alt" id='fa-recipebox'></i>
                <a href='https://recipeboxfd-gl21wxuji.now.sh/' target='_blank'><i class="fas fa-link" ></i></a>
+               <div class="comments">
+                  <ul>
+                    <li>CRUD app based on Create-React-App and NPM. Deployed on Now.sh</li>
+                    <li>Created with HTML5, CSS3, ReactJS and JSX</li>
+                    <li>Recipes are stored on Firebase. The synchronization of the App with the database is handle by Re-base and the syncState function</li>
+                  </ul>
+                </div>
             </div>
           </div>
           <div class="container-pomodoro" id="container-pomodoro">
@@ -95,6 +89,12 @@
               <p>Pomodoro Clock</p>
                <i class="fas fa-expand-arrows-alt" id='fa-pomodoro'></i>
                <a href='https://francoisdemilly.github.io/PomodoroClock/' target='_blank'><i class="fas fa-link" ></i></a>
+               <div class="comments">
+                  <ul>
+                    <li>Created with HTML5, CSS3 and Javascript</li>
+                    <li>Datasets of the DOM are stored in a array, on which a forEach function is applied. For each item being clicked, helper functions are triggered to manage user input and start the countdown of the clock and the filling</li>
+                  </ul>
+                </div>
             </div>
           </div>
           <div class="container-calculator" id="container-calculator">
@@ -103,6 +103,13 @@
                 <p>Calculator</p>
                 <i class="fas fa-expand-arrows-alt" id='fa-calculator'></i>
                 <a href='https://francoisdemilly.github.io/JSCalculator/' target='_blank'><i class="fas fa-link" ></i></a>
+                <div class="comments">
+                  <ul>
+                    <li>Created with HTML5, CSS3 and Javascript</li>
+                    <li>Values and Datasets of the DOM are stored in a array, on which a forEach function is applied. For each item being clicked, helper functions are triggered to manage user input</li>
+                    <li>Function eval() is used for calculation</li>
+                  </ul>
+                </div>
               </div>
           </div>
           <div class="container-simon" id="container-simon">
@@ -111,6 +118,12 @@
                 <p>Simon Game</p>
                 <i class="fas fa-expand-arrows-alt" id='fa-simon'></i>
                 <a href='https://francoisdemilly.github.io/simonGame/' target='_blank'><i class="fas fa-link" ></i></a>
+                <div class="comments">
+                  <ul>
+                    <li>Created with HTML5, CSS3 and Javascript</li>
+                    <li>Simon Game is a game which goal is for user to repeat the pattern showed along with sound by the program. With each round a new step is added to the pattern.</li>
+                  </ul>
+                </div>
               </div>
           </div>
           <div class="container-tictactoe" id="container-tictactoe">
@@ -119,6 +132,13 @@
                 <p>TicTacToe Game</p>
                 <i class="fas fa-expand-arrows-alt" id='fa-tictactoe'></i>
                 <a href='https://francoisdemilly.github.io/TicTacToeGame/' target='_blank'><i class="fas fa-link" ></i></a>
+                <div class="comments">
+                  <ul>
+                    <li>Created with HTML5, CSS3 and Javascript</li>
+                    <li>Tic Tac Toe is a game which goal is for user to beat the opponent by drawing 3 consecutive mark.</li>
+                    <li>Computer choice is random, Minimax algorithm has not be used for the game</li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div> <!--end of projects -->
@@ -162,19 +182,19 @@
   <footer id='Contact'>
   <!-- ******************************************************************* -->
     <div class='titleContainer'>
-      <div class='title'><h3>Contact</h3></div>
-      <div class=caretsUpDown>
-          <a href="#MyProjects"><i class="fas fa-caret-up"></i></a>
-          <a class='hidden'><i class="fas fa-caret-down"></i></a>
-      </div>
+      <div class='title'><h3>CONTACT</h3></div>
     </div>
   <!-- ******************************************************************* -->
-    <div class='container-contact'>
-      <div class='box-contact'><p>francois.demilly@gmail.com</p><br>
-                            <p>647-298-9015</p></div>
-      <div class='box-contact'><a href='https://github.com/FrancoisDemilly?tab=repositories' target='_blank'><i class="fab fa-github-square fa-2x"></i></a></div>
-      <div class='box-contact'><a href='https://www.linkedin.com/in/francois-demilly-50378930' target='_blank'><i class="fab fa-linkedin fa-2x"></i></a></div>
-    </div>
+    <div class="img-footer">
+      <div class='container-contact'>
+        <div class='box-contact'><p>francois.demilly@gmail.com</p><br>
+                              <p>647-298-9015</p></div>
+        <div class='box-contact'><a href='https://github.com/FrancoisDemilly?tab=repositories' target='_blank'><i class="fab fa-github-square fa-2x"></i></a></div>
+        <div class='box-contact'><a href='https://www.linkedin.com/in/francois-demilly-50378930' target='_blank'><i class="fab fa-linkedin fa-2x"></i></a></div>
+
+      </div>
+      <div class='copyright'>© 2018 coded with ♥ by Francois Demilly</div>
+    </div><!--end of img-footer -->
   </footer>
 </body>
   <script src="script.js"></script>
