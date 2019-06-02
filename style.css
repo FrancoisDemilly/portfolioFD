@@ -597,6 +597,9 @@ span{
   }
 }
 
+
+
+
 @media (min-width: 1441px){
   .container-recipebox,
   .container-pomodoro,
@@ -625,6 +628,14 @@ span{
 .modal-display{
   visibility: hidden;
 }
+
+/*
+960*540
+1024*640 
+
+
+
+*/
 
 .sliderClose{
   position: absolute;
